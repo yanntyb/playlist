@@ -34,8 +34,14 @@ $("#addSong").click(function (){
             song.className = "song"
             song.innerHTML = "Titre : " + $("#songName").get(0).value + "<br>";
             song.innerHTML += " artiste : " + $("#artiste").get(0).value + "<br>"
-            song.innerHTML += " lien : <a href=" + $("#lien").get(0).value + ">lien</a>" + "<br>";
+            let button = document.createElement("button");
+            button.innerHTML = "Jouer la video"
+            $(button).click(()=>{
+                afficherVideo($("#lien").get(0).value)
+            });
+            song.append(button)
             selected.append(song);
+
         }
 
     }
@@ -47,3 +53,21 @@ $("#suppPlaylist").click(() =>{
         selected = null;
     }
 })
+
+function afficherVideo(lien){
+    let video = $(document.createElement("iframe"));
+    video.attr("src",lien);
+    video.css({
+        position: "absolute",
+        top: "20vh",
+        allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    })
+    document.body.append(video.get(0))
+    closeVideo(video);
+}
+
+function closeVideo(video){
+    $("#closeVideo").click(()=>{
+        video.remove()
+    })
+}
