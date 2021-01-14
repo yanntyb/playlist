@@ -44,6 +44,6 @@ $("#addSong").click(function (){
 $("#suppPlaylist").click(() =>{
     if(selected !== null){
         selected.remove()
-        selected = null; 
+        selected = null;
     }
 })
