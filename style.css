@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.playlist{
+    width: 30vw;
+    height: 50vh;
+    border: 1px solid black;
+}
+
+#action {
+    width: min-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#affichage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1{
+    text-align: center;
+    color: cornflowerblue;
+    font-size: 4rem;
+    border-bottom: 1px solid black;
+    background-color: beige;
+}
+
+#chooseSong {
+    display: flex;
+    flex-direction: row;
+}
