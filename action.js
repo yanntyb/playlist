@@ -68,6 +68,6 @@ function afficherVideo(lien){
 
 function closeVideo(video){
     $("#closeVideo").click(()=>{
-        video.remove() 
+        video.remove()  
     })
 }
